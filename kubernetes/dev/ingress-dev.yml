@@ -1,0 +1,73 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-old-startup-ingress-dev
+  namespace: cert-manager
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.org/proxy-connect-timeout: "30s"
+    nginx.org/proxy-read-timeout: "20s"
+    nginx.org/client-max-body-size: "20m"
+    ingress.kubernetes.io/proxy-body-size: 20mb
+    kubernetes.io/tls-acme: "true"
+    nginx.ingress.kubernetes.io/tls-acme: "true"
+    cert-manager.io/issuer: letsencryptdns-dev
+    cert-manager.io/Issuer: letsencryptdns-dev
+    ingressShim.defaultIssuerName: letsencryptdns-dev
+    ingressShim.defaultIssuerKind: Issuer
+    global.rbac.create: "true"
+  labels:
+    last_updated: "2"
+spec:
+  tls:
+    - hosts:
+        - "*.my-old-startups-domain-staging.de"
+      secretName: my-old-startup-de-certificate-secret-dev
+  rules:
+    - host: app.my-old-startups-domain-staging.de
+      http:
+        paths:
+          - backend:
+              serviceName: customer-frontend-service-dev
+              servicePort: 80
+
+    - host: api-customer.my-old-startups-domain-staging.de
+      http:
+        paths:
+          - backend:
+              serviceName: customer-api-service-dev
+              servicePort: 80
+
+    - host: amp.my-old-startups-domain-staging.de
+      http:
+        paths:
+          - backend:
+              serviceName: amp-frontend-service-dev
+              servicePort: 80
+
+    - host: dashboard.my-old-startups-domain-staging.de
+      http:
+        paths:
+          - backend:
+              serviceName: dashboard-frontend-service-dev
+              servicePort: 80
+    - host: api-dashboard.my-old-startups-domain-staging.de
+      http:
+        paths:
+          - backend:
+              serviceName: dashboard-api-service-dev
+              servicePort: 80
+
+    - host: hub.my-old-startups-domain-staging.de
+      http:
+        paths:
+          - backend:
+              serviceName: hub-frontend-service-dev
+              servicePort: 80
+
+    - host: api-hub.my-old-startups-domain-staging.de
+      http:
+        paths:
+          - backend:
+              serviceName: hub-api-service-dev
+              servicePort: 80

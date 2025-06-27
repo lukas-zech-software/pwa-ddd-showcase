@@ -1,0 +1,24 @@
+{
+  "accessToken": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFqTkdSVUl6TjBGQ01rSkJNVU0xT1VJelF6VTVOa0l3Tmpnd1FqTTNNREEwTVVFd1F6RXlOZyJ9.eyJodHRwOi8vbWVhbHNwb3R0ZXIuZGUvYWNjZXNzTGV2ZWwiOiJCQUNLT0ZGSUNFIiwiaXNzIjoiaHR0cHM6Ly9hbGxpYWRvLmV1LmF1dGgwLmNvbS8iLCJzdWIiOiJnb29nbGUtb2F1dGgyfDEwNTc0OTYwMjU0MTk5ODI0NDQxMCIsImF1ZCI6WyJodHRwczovL2FwaS5kZWluLWxva2FsLW5lYmVuYW4uZGUiLCJodHRwczovL2FsbGlhZG8uZXUuYXV0aDAuY29tL3VzZXJpbmZvIl0sImlhdCI6MTU4OTU0MDkzMCwiZXhwIjoxNTg5NTQ4MTMwLCJhenAiOiJPenJvN2hpN0U5V1o5b2NDaHZxZ0NCRGxhWXZCRU9kNyIsInNjb3BlIjoib3BlbmlkIHByb2ZpbGUgZW1haWwifQ.DMgY1vH-kStdB-7ahwueQXqM2j5Q_htDhyoAwgYZppvFivIIBFe3u9pb7uN5b7IZ8gKGaGxaUBHqb1zJpRrPZgUR82y1R06mlNM0kS3IECsmSX2eeZT09NQdQ7-q5RSQdshvmZ_R28V7J1FSodFZs7Vnr58e7NwBrhbslHFj42Mj_Gnui33Uorb7WV2w3jhBCuYCBNRMXnuQ_-3uENv9mFVl0Q8Uo53dsYnzFt5RY51AsovNL_nVZYe3c4D3XX79m2XWl8YkAmSO8p8wI3Bzv8AJddZUUIP43VPVanqhlZmy3BT4FT_CM2hD-sYxB-WMznC6iLYa0pfZ-_3XFG3jWQ",
+  "idToken": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCIsImtpZCI6IlFqTkdSVUl6TjBGQ01rSkJNVU0xT1VJelF6VTVOa0l3Tmpnd1FqTTNNREEwTVVFd1F6RXlOZyJ9.eyJodHRwOi8vbWVhbHNwb3R0ZXIuZGUvYWNjZXNzTGV2ZWwiOiJCQUNLT0ZGSUNFIiwiZ2l2ZW5fbmFtZSI6Ikx1a2FzIiwiZmFtaWx5X25hbWUiOiJaZWNoIiwibmlja25hbWUiOiJsdWthcyIsIm5hbWUiOiJMdWthcyBaZWNoIiwicGljdHVyZSI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS8tc0llLVVkOUJfZmcvQUFBQUFBQUFBQUkvQUFBQUFBQUFBQUEvQU1adXVja2YtSjhpZ1ZPUEdOWjNNVGtOYjB5cU5PajRxZy9waG90by5qcGciLCJsb2NhbGUiOiJkZSIsInVwZGF0ZWRfYXQiOiIyMDIwLTA1LTE1VDExOjA4OjUwLjI0MloiLCJlbWFpbCI6Imx1a2FzQGFsbGlhZG8uY29tIiwiZW1haWxfdmVyaWZpZWQiOnRydWUsImlzcyI6Imh0dHBzOi8vYWxsaWFkby5ldS5hdXRoMC5jb20vIiwic3ViIjoiZ29vZ2xlLW9hdXRoMnwxMDU3NDk2MDI1NDE5OTgyNDQ0MTAiLCJhdWQiOiJPenJvN2hpN0U5V1o5b2NDaHZxZ0NCRGxhWXZCRU9kNyIsImlhdCI6MTU4OTU0MDkzMCwiZXhwIjoxNTg5NTc2OTMwLCJhdF9oYXNoIjoieXlZcmVCNUJqZ3JNLWdSdmh0Ni1OZyIsIm5vbmNlIjoiQWNvSncxcmpSZVM3TXF1WlVYbEF2MTBERX5jTFJjdjAifQ.aL69CloPsOXV1awBRfoGeDtPhyXxIaCvOuUIdGFszZZ4hhsGSTxJW2eM2f6T-9XDDd_MztNvjw0oCK3BCK4_xEAt0kV_ludoTOU6kZ0H50w1IUJCPzo5_WYZyPfjYNiBc6129WosmsDXOpJ5-xHJTzBSL4G5j9uiRCGV4Xd7sC2wjfd6NDj5iPnILF8muyn-wOSGGZJd5ghtlwjfvyRY-lfmML3NCYya5cRWiSGJHrZ1kTgDnNxYj2W0Mm3wIUHskUMLEfvnLk5muQzYmKe26xCeXjohYMX-oXC8CTpk-gecCg_DWuDlJXJS1Ia3TkuxRUT-WTo0iRiO9CxVDdYHfA",
+  "expiresAt": 1589548131758,
+  "userProfile": {
+    "http://my-old-startup.de/accessLevel": "BACKOFFICE",
+    "given_name": "Lukas",
+    "family_name": "Zech",
+    "nickname": "lukas",
+    "name": "Lukas Zech",
+    "picture": "https://lh3.googleusercontent.com/-sIe-Ud9B_fg/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuckf-J8igVOPGNZ3MTkNb0yqNOj4qg/photo.jpg",
+    "locale": "de",
+    "updated_at": "2020-05-15T11:08:50.242Z",
+    "email": "lukas@my-old-startup.com",
+    "email_verified": true,
+    "iss": "https://my-old-startup.eu.auth0.com/",
+    "sub": "google-oauth2|105749602541998244410",
+    "aud": "Ozro7hi7E9WZ9ocChvqgCBDlaYvBEOd7",
+    "iat": 1589540930,
+    "exp": 1589576930,
+    "at_hash": "yyYreB5BjgrM-gRvht6-Ng",
+    "nonce": "AcoJw1rjReS7MquZUXlAv10DE~cLRcv0"
+  }
+}

@@ -1,0 +1,5 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target" : { "namespace": "android_app", "package_name": "de.my-old-startups-domain.app",
+               "sha256_cert_fingerprints": ["F9:A2:1C:21:18:98:E0:29:9E:F6:F5:3A:32:D1:80:55:F4:06:56:F1:84:86:88:C6:03:A7:4F:A4:3B:D0:23:23"] }
+}]

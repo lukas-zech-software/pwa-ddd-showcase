@@ -1,0 +1,32 @@
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-env": {},
+        "transform-runtime": {},
+        "styled-jsx": {},
+        "class-properties": {
+          "loose": true
+        }
+      }
+    ]
+  ],
+  "plugins": [
+    [
+      "@babel/plugin-proposal-decorators",
+      {
+        "legacy": true
+      }
+    ],
+    [
+      "babel-plugin-optimize-clsx",
+      {
+        "libraries": [
+          "clsx",
+          "classnames"
+        ]
+      }
+    ]
+  ]
+}

@@ -1,0 +1,71 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: hub-api
+  namespace: cert-manager
+  labels:
+    app: hub
+    tier: backend
+    version: "6"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: hub
+      tier: backend
+  template:
+    metadata:
+      labels:
+        app: hub
+        tier: backend
+    spec:
+      containers:
+      - name: hub-api
+        image: eu.gcr.io/tablespotter/api:$COMMIT_ID
+        env:
+        - name: API_TYPE
+          value: HUB
+        - name: BASE_URL
+          value: 'https://hub.my-old-startups-domain.de'
+        - name: GOOGLE_APPLICATION_CREDENTIALS
+          value: '/opt/my-old-startups-domain/api-service-iam-json/my-old-startup-a890aaefe5d7.json'
+        - name: GOOGLE_CLOUD_PROJECT_ID
+          value: 'tablespotter'
+        ports:
+        - containerPort: 8181
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8181
+        readinessProbe:
+          httpGet:
+            path: /healthz
+            port: 8181
+        volumeMounts:
+        - name: api-service-iam-json
+          mountPath: "/opt/my-old-startups-domain/api-service-iam-json"
+          readOnly: true
+      volumes:
+      - name: api-service-iam-json
+        secret:
+          secretName: api-service-iam-json
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: hub-api-service
+  namespace: cert-manager
+  labels:
+    app: hub
+    tier: backend
+    version: "6"
+spec:
+  selector:
+    app: hub
+    tier: backend
+  type: NodePort
+  ports:
+  - protocol: TCP
+    name: http
+    port: 80
+    targetPort: 8181

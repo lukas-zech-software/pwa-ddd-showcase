@@ -1,0 +1,37 @@
+{
+  "name": "my-old-startups-domain-hub",
+  "version": "1.0.0",
+  "description": "Backoffice Hub app for my-old-startups-domain",
+  "main": "./build/server/index.js",
+  "scripts": {
+    "start": "node build/server/index.js",
+    "build": "webpack --config webpack.prod.config.js && cp -r ./static/*.* ./build/client",
+    "build-check": "tsc -p .",
+    "dev": "webpack-dev-server --config webpack.dev.config.js",
+    "lint-fix": "eslint --format unix --fix \"**/*.ts\" \"**/*.tsx\""
+  },
+  "author": "Lukas zech",
+  "license": "UNLICENSED",
+  "xhusky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "pre-push": "npm run build-check"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --format unix",
+    "*.tsx": "eslint --format unix"
+  },
+  "dependencies": {
+    "moment": "^2.24.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3"
+  }
+}

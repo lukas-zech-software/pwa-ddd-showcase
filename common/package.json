@@ -1,0 +1,52 @@
+{
+  "name": "@my-old-startup/common",
+  "version": "1.0.0",
+  "description": "my-old-startups-domain common code",
+  "scripts": {
+    "build-check": "tsc -p .",
+    "lint-fix": "eslint --format unix --fix \"**/*.ts\"",
+    "test": "jest"
+  },
+  "dependencies": {
+    "@types/auth0-js": "^8.11.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "class-sanitizer": "0.0.5",
+    "class-transformer": "^0.1.10",
+    "class-validator": "^0.9.1",
+    "moment": "^2.24.0",
+    "reflect-metadata": "^0.1.12",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.3"
+  },
+  "devDependencies": {
+    "@types/googlemaps": "^3.39.3",
+    "@types/jest": "24.0.11",
+    "@types/node": "10.12.26",
+    "@typescript-eslint/eslint-plugin": "^2.0.0",
+    "@typescript-eslint/eslint-plugin-tslint": "^2.0.0",
+    "@typescript-eslint/parser": "^2.0.0",
+    "babel-plugin-syntax-dynamic-import": "6.18.0",
+    "eslint": "^6.2.0",
+    "eslint-import-resolver-typescript": "^1.1.1",
+    "eslint-plugin-arca": "^0.9.0",
+    "husky": "^2.3.0",
+    "jest": "^24.5.0",
+    "lint-staged": "^8.1.7",
+    "ts-jest": "^24.0.0",
+    "tslint": "^5.18.0"
+  },
+  "xhusky": {
+    "hooks": {
+      "Xpre-commit": "lint-staged",
+      "pre-push": "npm run build-check"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --format unix"
+  }
+}

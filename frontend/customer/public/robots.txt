@@ -1,0 +1,3 @@
+User-Agent: *
+Allow: /
+Sitemap: https://storage.googleapis.com/static.my-old-startups-domain.de/meta/sitemap.xml.

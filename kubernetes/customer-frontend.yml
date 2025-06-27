@@ -1,0 +1,45 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: customer-frontend
+  namespace: cert-manager
+  labels:
+    app: customer
+    tier: frontend
+    version: "1"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: customer
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: customer
+        tier: frontend
+    spec:
+      containers:
+        - name: customer-frontend
+          image: eu.gcr.io/tablespotter/customer-frontend:$COMMIT_ID
+          ports:
+            - containerPort: 8080
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: customer-frontend-service
+  namespace: cert-manager
+  labels:
+    app: customer
+    tier: frontend
+spec:
+  selector:
+    app: customer
+    tier: frontend
+  type: NodePort
+  ports:
+    - protocol: TCP
+      name: http
+      port: 80
+      targetPort: 8080

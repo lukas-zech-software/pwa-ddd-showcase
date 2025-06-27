@@ -1,0 +1,5 @@
+node_modules/
+*Dockerfile*
+*docker-compose*
+api/build/
+api/node_modules/

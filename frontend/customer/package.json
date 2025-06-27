@@ -1,0 +1,58 @@
+{
+  "name": "@my-old-startup/frontend-customer",
+  "version": "1.0.0",
+  "description": "The my-old-startups-domain Customer App",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./next-alias.js -p 8383",
+    "build": "PROD_BUILD=true node ./next-alias.js build",
+    "start": "node ./next-alias.js start -p 8080",
+    "lint-fix": "eslint --format unix --fix \"**/*.ts\" \"**/*.tsx\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@google/markerclustererplus": "^5.0.3",
+    "apicache": "^1.5.2",
+    "cookie-parser": "^1.4.4",
+    "google-maps": "^4.2.3",
+    "js-cookie": "^2.2.0",
+    "lodash.throttle": "^4.0.8",
+    "module-alias": "^2.2.2",
+    "next": "^9.4.4",
+    "next-pwa": "^2.3.3",
+    "prettier": "^2.0.5",
+    "react-lazyload": "^2.6.2",
+    "react-swipeable-views": "^0.13.9",
+    "react-swipeable-views-utils": "^0.13.9",
+    "react-visibility-sensor": "^5.1.1",
+    "typescript": "^3.9.3",
+    "workbox-window": "^4.3.1"
+  },
+  "devDependencies": {
+    "@next/bundle-analyzer": "^9.3.4",
+    "@types/express": "^4.17.0",
+    "@types/js-cookie": "2.2.2",
+    "@types/lodash.throttle": "^4.0.6",
+    "@types/react-lazyload": "^2.5.0",
+    "@types/react-swipeable-views": "^0.13.0",
+    "@types/react-swipeable-views-core": "^0.13.0",
+    "@types/react-swipeable-views-utils": "^0.13.2",
+    "@types/styled-jsx": "2.2.7",
+    "@types/workbox-window": "^4.3.0",
+    "eslint": "^6.1.0",
+    "husky": "^1.3.1",
+    "lint-staged": "^8.1.0",
+    "to-string-loader": "^1.1.5",
+    "webpack-bundle-analyzer": "^3.6.1"
+  },
+  "xhusky": {
+    "hooks": {
+      "pre-push": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --format unix",
+    "*.tsx": "eslint --format unix"
+  }
+}

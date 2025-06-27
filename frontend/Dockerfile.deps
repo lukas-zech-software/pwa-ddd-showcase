@@ -1,0 +1,39 @@
+FROM node:12.2-alpine AS dependencies
+
+# TODO: Temporary, remove after mui-datatables as been updated or replaced
+# Install git to get npm modules from github
+RUN apk update
+RUN apk --no-cache add --virtual git
+
+# Copy dependency files
+COPY common/package.json /opt/my-old-startups-domain/common/
+COPY common/package-lock.json /opt/my-old-startups-domain/common/
+
+COPY frontend/tsconfig.base.json /opt/my-old-startups-domain/frontend/
+COPY frontend/package.json /opt/my-old-startups-domain/frontend/
+COPY frontend/package-lock.json /opt/my-old-startups-domain/frontend/
+
+COPY frontend/dashboard/package.json /opt/my-old-startups-domain/frontend/dashboard/
+COPY frontend/dashboard/package-lock.json /opt/my-old-startups-domain/frontend/dashboard/
+
+COPY frontend/hub/package.json /opt/my-old-startups-domain/frontend/hub/
+COPY frontend/hub/package-lock.json /opt/my-old-startups-domain/frontend/hub/
+
+COPY frontend/customer/package.json /opt/my-old-startups-domain/frontend/customer/
+COPY frontend/customer/package-lock.json /opt/my-old-startups-domain/frontend/customer/
+
+
+WORKDIR /opt/my-old-startups-domain/common
+RUN npm install
+
+WORKDIR /opt/my-old-startups-domain/frontend
+RUN npm install
+
+WORKDIR /opt/my-old-startups-domain/frontend/dashboard
+RUN npm install
+
+WORKDIR /opt/my-old-startups-domain/frontend/hub
+RUN npm install
+
+WORKDIR /opt/my-old-startups-domain/frontend/customer
+RUN npm install

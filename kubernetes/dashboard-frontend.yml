@@ -1,0 +1,54 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: dashboard-frontend
+  namespace: cert-manager
+  labels:
+    app: dashboard
+    tier: frontend
+    version: "7"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: dashboard
+      tier: frontend
+  template:
+    metadata:
+      namespace: cert-manager
+      labels:
+        app: dashboard
+        tier: frontend
+    spec:
+      containers:
+        - name: dashboard-frontend
+          image: eu.gcr.io/tablespotter/dashboard-frontend:$COMMIT_ID
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: 8080
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: dashboard-frontend-service
+  namespace: cert-manager
+  labels:
+    app: dashboard
+    tier: frontend
+spec:
+  selector:
+    app: dashboard
+    tier: frontend
+  type: NodePort
+  ports:
+    - protocol: TCP
+      name: http
+      port: 80
+      targetPort: 8080

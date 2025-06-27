@@ -1,0 +1,53 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: customer-dev-frontend
+  namespace: cert-manager
+  labels:
+    app: customer-dev
+    tier: frontend
+    version: "2"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: customer-dev
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        app: customer-dev
+        tier: frontend
+    spec:
+      containers:
+        - name: customer-dev-frontend
+          image: eu.gcr.io/tablespotter/customer-frontend:$COMMIT_ID
+          ports:
+            - containerPort: 8080
+          livenessProbe:
+            httpGet:
+              path: /api/healthz
+              port: 8080
+          readinessProbe:
+            httpGet:
+              path: /api/healthz
+              port: 8080
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: customer-dev-frontend-service
+  namespace: cert-manager
+  labels:
+    app: customer-dev
+    tier: frontend
+spec:
+  selector:
+    app: customer-dev
+    tier: frontend
+  type: NodePort
+  ports:
+    - protocol: TCP
+      name: http
+      port: 80
+      targetPort: 8080

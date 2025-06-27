@@ -1,0 +1,50 @@
+/*
+import 'jasmine';
+import { EnumUtils } from './EnumUtils';
+import { NamespaceUtils } from '../../api/src/utils/NamespaceUtils';
+
+enum TestEnum {
+  ONE   = 1,
+  TWO   = 10,
+  THREE = 100,
+  FOUR,
+}
+
+describe(NamespaceUtils.resolve(__filename), () => {
+  describe('#getKeysAndValues', () => {
+    it('should return an array with key/value properties of the enum', () => {
+      const expectedResult = [
+        { key: 'ONE', value: 1 },
+        { key: 'TWO', value: 10 },
+        { key: 'THREE', value: 100 },
+        { key: 'FOUR', value: 101 },
+      ];
+
+      expect(EnumUtils.getKeysAndValues(TestEnum)).toEqual(expectedResult);
+    });
+  });
+
+  describe('#getKeys', () => {
+    it('should return the labels of the enum', () => {
+      const expectedResult = ['ONE', 'TWO', 'THREE', 'FOUR'];
+
+      expect(EnumUtils.getKeys(TestEnum)).toEqual(expectedResult);
+    });
+  });
+
+  describe('#getValues', () => {
+    it('should return the values of the enum', () => {
+      const expectedResult = [1, 10, 100, 101];
+
+      expect(EnumUtils.getValues(TestEnum)).toEqual(expectedResult);
+    });
+  });
+
+  describe('#getValue', () => {
+    it('should return the enum value associatied to the key', () => {
+      expect(EnumUtils.getValue(TestEnum, TestEnum[TestEnum.TWO])).toEqual(TestEnum.TWO);
+    });
+  });
+
+});
+*/
