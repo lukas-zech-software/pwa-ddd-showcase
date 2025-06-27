@@ -12,6 +12,15 @@
 
 > I am the owner of the code and hold all copyrights
 > It is provided under the "Unlicense" for everyone read, copy or use it however you want
+<br>
+<br>
+
+Below this line is the original README of the old repository
+<hr>
+
+
+<br>
+<br>
 
 # Development
 
