@@ -2,7 +2,10 @@
 
 > **Please note:**
 >
-> This is only showcase repository which contains some of the source code of my old startup
+> This is a showcase repository which contains some of the source code of my old startup
+> 
+> I wrote all of this code myself in 2020
+> 
 > The code is only meant to demonstrate some architectural decisions, Domain-Driven Design principles and general impressions of code quality
 >
 > * There is no live version of this application running anymore as the company was shutdown in 2024
