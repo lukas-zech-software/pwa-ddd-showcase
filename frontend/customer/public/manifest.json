@@ -1,0 +1,24 @@
+{
+  "accessToken": "ACCESS_TOKEN",
+  "idToken": "ID_TOKEN",
+  "expiresAt": 1589548131758,
+  "userProfile": {
+    "http://my-old-startup.de/accessLevel": "BACKOFFICE",
+    "given_name": "Lukas",
+    "family_name": "Zech",
+    "nickname": "lukas",
+    "name": "Lukas Zech",
+    "picture": "https://lh3.googleusercontent.com/-sIe-Ud9B_fg/AAAAAAAAAAI/AAAAAAAAAAA/AMZuuckf-J8igVOPGNZ3MTkNb0yqNOj4qg/photo.jpg",
+    "locale": "de",
+    "updated_at": "2020-05-15T11:08:50.242Z",
+    "email": "lukas@my-old-startup.com",
+    "email_verified": true,
+    "iss": "https://my-old-startup.eu.auth0.com/",
+    "sub": "google-oauth2|oauth2_sub",
+    "aud": "AUD",
+    "iat": 1589540930,
+    "exp": 1589576930,
+    "at_hash": "AT_HASH",
+    "nonce": "NONCE"
+  }
+}

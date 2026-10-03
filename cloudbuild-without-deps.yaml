@@ -1,0 +1,90 @@
+options:
+
+steps:
+  ### API
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/api-dependencies'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/api:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/api:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/api:$COMMIT_SHA'
+      - '--build-arg'
+      - 'base_domain=${_BASE_DOMAIN}'
+      - '--build-arg'
+      - 'is_staging=${_IS_STAGING}'
+      - '--file=api/Dockerfile'
+      - '.'
+
+  ## FRONTEND Dependencies
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['pull', 'eu.gcr.io/$PROJECT_ID/frontend-dependencies:latest']
+
+  ### DASHBOARD FRONTEND
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/frontend-dependencies:latest'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/dashboard-frontend:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/dashboard-frontend:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/dashboard-frontend:$COMMIT_SHA'
+      - '--build-arg'
+      - 'base_domain=${_BASE_DOMAIN}'
+      - '--build-arg'
+      - 'is_staging=${_IS_STAGING}'
+      - '--file=frontend/dashboard/Dockerfile'
+      - '.'
+
+  ### HUB FRONTEND
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/frontend-dependencies:latest'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/hub-frontend:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/hub-frontend:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/hub-frontend:$COMMIT_SHA'
+      - '--build-arg'
+      - 'base_domain=${_BASE_DOMAIN}'
+      - '--build-arg'
+      - 'is_staging=${_IS_STAGING}'
+      - '--file=frontend/hub/Dockerfile'
+      - '.'
+
+  ### CUSTOMER FRONTEND
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/frontend-dependencies:latest'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/customer-frontend:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/customer-frontend:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/customer-frontend:$COMMIT_SHA'
+      - '--build-arg'
+      - 'base_domain=${_BASE_DOMAIN}'
+      - '--build-arg'
+      - 'is_staging=${_IS_STAGING}'
+      - '--file=frontend/customer/Dockerfile'
+      - '.'
+
+  ### AMP FRONTEND
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/frontend-dependencies:latest'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/amp-frontend:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/amp-frontend:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/amp-frontend:$COMMIT_SHA'
+      - '--build-arg'
+      - 'base_domain=${_BASE_DOMAIN}'
+      - '--build-arg'
+      - 'is_staging=${_IS_STAGING}'
+      - '--file=frontend/customer/amp/Dockerfile'
+      - '.'
+
+images:
+  - 'eu.gcr.io/$PROJECT_ID/api'
+  - 'eu.gcr.io/$PROJECT_ID/dashboard-frontend'
+  - 'eu.gcr.io/$PROJECT_ID/hub-frontend'
+  - 'eu.gcr.io/$PROJECT_ID/customer-frontend'
+  - 'eu.gcr.io/$PROJECT_ID/amp-frontend'
+
+timeout: 1200s

@@ -1,0 +1,53 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "allowJs": true,
+    "jsx": "preserve",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "strictPropertyInitialization": false,
+    "noFallthroughCasesInSwitch": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "preserveConstEnums": true,
+    "skipLibCheck": true,
+    "sourceMap": true,
+    "noEmit": true,
+    "lib": [
+      "es6",
+      "dom",
+      "es2016",
+      "es2017"
+    ],
+    "baseUrl": ".",
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "resolveJsonModule": true
+  },
+  "exclude": [
+    "node_modules/**/*",
+    "amp/**/*"
+  ],
+  "include": [
+    "../../common/**/*.tsx",
+    "../../common/**/*.ts",
+    "../../common/**/*.d.ts",
+    "../common/**/*.tsx",
+    "../common/**/*.ts",
+    "../common/typings/*.d.ts",
+    "../typings/*.d.ts",
+    "node_modules/@my-old-startup/**/*.tsx",
+    "node_modules/@my-old-startup/**/*.ts",
+    "node_modules/@types/**/*.d.ts",
+    "typings/*.d.ts",
+    "**/*.tsx",
+    "**/*.ts"
+  ]
+}

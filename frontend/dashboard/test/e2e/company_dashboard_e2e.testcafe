@@ -1,0 +1,1390 @@
+{
+    "fixtures": [
+        {
+            "name": "Company Dashboard E2E",
+            "pageUrl": "http://localhost:8181",
+            "tests": [
+                {
+                    "name": "Login and register",
+                    "commands": [
+                        {
+                            "callsite": "1",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('button').withText('LOGIN')"
+                            },
+                            "studio": {
+                                "offsetX": 34,
+                                "offsetY": 23,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('LOGIN')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiButtonBase-root-93 MuiButton-root-67 MuiButton-\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiCardActions-root-65.Login-actions-3').find('button').withText('LOGIN')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiCardActions-root-65.Login-actions-3').find('[class^=\"MuiButtonBase-root-93 MuiButton-root-67 MuiButton-\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('LOGIN').nth(2).find('[class^=\"MuiButtonBase-root-93 MuiButton-root-67 MuiButton-\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiCardActions-root-65.Login-actions-3').find('button')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('LOGIN').nth(2).nth(2).find('button')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').nth(3).find('button')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "2",
+                            "options": {
+                                "caretPos": 0
+                            },
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('.auth0-lock-widget').find('[name=\"email\"]')"
+                            },
+                            "studio": {
+                                "offsetX": null,
+                                "offsetY": null,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.auth0-lock-widget').find('[name=\"email\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[name=\"email\"].auth0-lock-input')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#auth0-lock-container-1').find('[name=\"email\"].auth0-lock-input')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"auth0-lock-input-wrap auth0-lock-focused auth0-loc\"]').find('[name=\"email\"].auth0-lock-input')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('or').nth(14).find('[name=\"email\"].auth0-lock-input')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"auth0-lock-input-wrap auth0-lock-focused auth0-loc\"]').find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('or').nth(14).nth(14).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#auth0-lock-container-1').find('div').find('div').nth(1).find('form').find('div').find('div').find('div').nth(8).find('span').find('div').find('div').find('div').find('div').find('div').find('div').find('div').find('div').find('div').nth(6).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').nth(1).find('form').find('div').find('div').find('div').nth(8).find('span').find('div').find('div').find('div').find('div').find('div').find('div').find('div').find('div').find('div').nth(6).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "luke34@gmx.de",
+                            "type": "type-text"
+                        },
+                        {
+                            "callsite": "3",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('.auth0-lock-widget').find('[name=\"password\"]')"
+                            },
+                            "studio": {
+                                "offsetX": 52,
+                                "offsetY": 26,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.auth0-lock-widget').find('[name=\"password\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[name=\"password\"].auth0-lock-input')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#auth0-lock-container-1').find('[name=\"password\"].auth0-lock-input')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"auth0-lock-input-wrap auth0-lock-input-wrap-with-i\"]').find('[name=\"password\"].auth0-lock-input')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('or').nth(14).find('[name=\"password\"].auth0-lock-input')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"auth0-lock-input-wrap auth0-lock-input-wrap-with-i\"]').find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('or').nth(14).nth(14).find('div').nth(2).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#auth0-lock-container-1').find('div').find('div').nth(1).find('form').find('div').find('div').find('div').nth(8).find('span').find('div').find('div').find('div').find('div').find('div').find('div').find('div').find('div').find('div').nth(6).find('div').nth(2).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').nth(1).find('form').find('div').find('div').find('div').nth(8).find('span').find('div').find('div').find('div').find('div').find('div').find('div').find('div').find('div').find('div').nth(6).find('div').nth(2).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "TestAuth1337!!!",
+                            "type": "type-text"
+                        },
+                        {
+                            "callsite": "4",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('.auth0-lock-submit')"
+                            },
+                            "studio": {
+                                "offsetX": 146,
+                                "offsetY": 46,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.auth0-lock-submit')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#auth0-lock-container-1').find('.auth0-lock-submit')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.auth0-lock-cred-pane.auth0-lock-quiet').find('.auth0-lock-submit')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('my-old-startups-domain').nth(4).find('.auth0-lock-submit')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('LOG IN').nth(1)"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#auth0-lock-container-1').find('button').withText('LOG IN').nth(1)"
+                                        },
+                                        "ruleType": "id-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('my-old-startups-domain').nth(4).nth(4).find('button').nth(1)"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#auth0-lock-container-1').find('div').find('div').nth(1).find('form').find('div').find('div').find('button').nth(1)"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').nth(1).find('form').find('div').find('div').find('button').nth(1)"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "8",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('button').withText('REGISTER')"
+                            },
+                            "studio": {
+                                "offsetX": 36,
+                                "offsetY": 15,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('REGISTER')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiCardActions-root-174').find('button').withText('REGISTER')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiButtonBase-root-65 MuiButton-root-176 MuiButton\"]').nth(0)"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiCardActions-root-174').find('[class^=\"MuiButtonBase-root-65 MuiButton-root-176 MuiButton\"]').nth(0)"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('REGISTER').nth(2).find('[class^=\"MuiButtonBase-root-65 MuiButton-root-176 MuiButton\"]').nth(0)"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiCardActions-root-174').find('button')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('REGISTER').nth(2).nth(2).find('button')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').nth(1).find('button')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "12",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('input[name=\"title\"]')"
+                            },
+                            "studio": {
+                                "offsetX": null,
+                                "offsetY": null,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiInput-input-232[name=\"title\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiInput-root-224 MuiInput-fullWidth-231 MuiInput-\"]').find('.MuiInput-input-232[name=\"title\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Name of your Restaurants').nth(5).find('.MuiInput-input-232[name=\"title\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiInput-root-224 MuiInput-fullWidth-231 MuiInput-\"]').find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Name of your Restaurants').nth(5).nth(5).find('div').find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').nth(2).find('div').find('div').find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('input[name=\"title\"]')"
+                                        },
+                                        "ruleType": "cust"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "TestRestaurant1",
+                            "type": "type-text"
+                        },
+                        {
+                            "callsite": "13",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('input[name=\"address\"]')"
+                            },
+                            "studio": {
+                                "offsetX": 193,
+                                "offsetY": 16,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiInput-input-232[name=\"address\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Address and street number').nth(5).find('.MuiInput-input-232[name=\"address\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiInput-root-224 MuiInput-fullWidth-231 MuiInput-\"]').nth(1).find('.MuiInput-input-232[name=\"address\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiInput-root-224 MuiInput-fullWidth-231 MuiInput-\"]').nth(1).nth(1).find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Address and street number').nth(5).nth(5).find('div').find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').nth(2).find('div').find('div').nth(3).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('input[name=\"address\"]')"
+                                        },
+                                        "ruleType": "cust"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "Hinterholz 16",
+                            "type": "type-text"
+                        },
+                        {
+                            "callsite": "14",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('input[name=\"zipCode\"]')"
+                            },
+                            "studio": {
+                                "offsetX": 164,
+                                "offsetY": 13,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiInput-input-232[name=\"zipCode\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Zip code').nth(5).find('.MuiInput-input-232[name=\"zipCode\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiInput-root-224 MuiInput-fullWidth-231 MuiInput-\"]').nth(2).find('.MuiInput-input-232[name=\"zipCode\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiInput-root-224 MuiInput-fullWidth-231 MuiInput-\"]').nth(2).nth(2).find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Zip code').nth(5).nth(5).find('div').find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').nth(2).find('div').find('div').nth(6).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('input[name=\"zipCode\"]')"
+                                        },
+                                        "ruleType": "cust"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "85250",
+                            "type": "type-text"
+                        },
+                        {
+                            "callsite": "15",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('input[name=\"email\"]')"
+                            },
+                            "studio": {
+                                "offsetX": 567,
+                                "offsetY": 24,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiInput-input-232[name=\"email\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Email').nth(5).find('.MuiInput-input-232[name=\"email\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiInput-root-224 MuiInput-fullWidth-231 MuiInput-\"]').nth(3).find('.MuiInput-input-232[name=\"email\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiInput-root-224 MuiInput-fullWidth-231 MuiInput-\"]').nth(3).nth(3).find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Email').nth(5).nth(5).find('div').find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').nth(2).find('div').find('div').nth(9).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('input[name=\"email\"]')"
+                                        },
+                                        "ruleType": "cust"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "asd@asd.asd",
+                            "type": "type-text"
+                        },
+                        {
+                            "callsite": "16",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('input[name=\"telephone\"]')"
+                            },
+                            "studio": {
+                                "offsetX": null,
+                                "offsetY": null,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiInput-input-232[name=\"telephone\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Telephone').nth(5).find('.MuiInput-input-232[name=\"telephone\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiInput-root-224 MuiInput-fullWidth-231 MuiInput-\"]').nth(4).find('.MuiInput-input-232[name=\"telephone\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiInput-root-224 MuiInput-fullWidth-231 MuiInput-\"]').nth(4).nth(4).find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Telephone').nth(5).nth(5).find('div').find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').nth(2).find('div').find('div').nth(12).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('input[name=\"telephone\"]')"
+                                        },
+                                        "ruleType": "cust"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "0123456789",
+                            "type": "type-text"
+                        },
+                        {
+                            "callsite": "17",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('input[name=\"website\"]')"
+                            },
+                            "studio": {
+                                "offsetX": 90,
+                                "offsetY": 15,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiInput-input-232[name=\"website\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Website').nth(5).find('.MuiInput-input-232[name=\"website\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiInput-root-224 MuiInput-fullWidth-231 MuiInput-\"]').nth(5).find('.MuiInput-input-232[name=\"website\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiInput-root-224 MuiInput-fullWidth-231 MuiInput-\"]').nth(5).nth(5).find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Website').nth(5).nth(5).find('div').find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').nth(2).find('div').find('div').nth(15).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('input[name=\"website\"]')"
+                                        },
+                                        "ruleType": "cust"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "www.asd.asd",
+                            "type": "type-text"
+                        },
+                        {
+                            "callsite": "18",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('button')"
+                            },
+                            "studio": {
+                                "offsetX": 29,
+                                "offsetY": 14,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('REGISTER')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiButtonBase-root-90 MuiButton-root-64 MuiButton-\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiCardActions-root-62.Registration-actions-244').find('button').withText('REGISTER')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiCardActions-root-62.Registration-actions-244').find('[class^=\"MuiButtonBase-root-90 MuiButton-root-64 MuiButton-\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('REGISTER').nth(2).find('[class^=\"MuiButtonBase-root-90 MuiButton-root-64 MuiButton-\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiCardActions-root-62.Registration-actions-244').find('button')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('REGISTER').nth(2).nth(2).find('button')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').nth(22).find('button')"
+                                        },
+                                        "ruleType": "dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button')"
+                                        },
+                                        "ruleType": "cust"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "actual": {
+                                "type": "js-expr",
+                                "value": "Selector('svg')"
+                            },
+                            "assertionType": "ok",
+                            "callsite": "19",
+                            "message": "Should show Ok Icon",
+                            "options": {},
+                            "studio": {},
+                            "type": "assertion"
+                        },
+                        {
+                            "actual": {
+                                "type": "js-expr",
+                                "value": "Selector('aside').innerText"
+                            },
+                            "assertionType": "contains",
+                            "callsite": "21",
+                            "expected": {
+                                "type": "js-expr",
+                                "value": "'Your registration was successful'"
+                            },
+                            "message": "Should show success message",
+                            "options": {},
+                            "studio": {},
+                            "type": "assertion"
+                        },
+                        {
+                            "callsite": "22",
+                            "studio": {},
+                            "type": "navigate-to",
+                            "url": "/"
+                        },
+                        {
+                            "callsite": "26",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('span').withText('Not approved')"
+                            },
+                            "studio": {
+                                "offsetX": 26,
+                                "offsetY": 29,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('span').withText('Not approved')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiTypography-root-82 MuiTypography-body2-90 MuiCa\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiCardHeader-content-155').nth(2).find('span').withText('Not approved')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Not approved').nth(5).find('[class^=\"MuiTypography-root-82 MuiTypography-body2-90 MuiCa\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiCardHeader-content-155').nth(2).nth(2).find('[class^=\"MuiTypography-root-82 MuiTypography-body2-90 MuiCa\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Not approved').nth(5).nth(5).find('span')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiCardHeader-content-155').nth(2).nth(2).nth(2).find('span')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').find('main').find('div').nth(1).find('div').find('div').nth(1).find('span')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        }
+                    ]
+                },
+                {
+                    "name": "Login new company",
+                    "commands": [
+                        {
+                            "callsite": "1",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('button').withText('LOGIN')"
+                            },
+                            "studio": {
+                                "offsetX": 49,
+                                "offsetY": 24,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('LOGIN')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiButtonBase-root-93 MuiButton-root-67 MuiButton-\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiCardActions-root-65.Login-actions-3').find('button').withText('LOGIN')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiCardActions-root-65.Login-actions-3').find('[class^=\"MuiButtonBase-root-93 MuiButton-root-67 MuiButton-\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('LOGIN').nth(2).find('[class^=\"MuiButtonBase-root-93 MuiButton-root-67 MuiButton-\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiCardActions-root-65.Login-actions-3').find('button')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('LOGIN').nth(2).nth(2).find('button')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').nth(3).find('button')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "2",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('.auth0-lock-widget').find('[name=\"email\"]')"
+                            },
+                            "studio": {
+                                "offsetX": null,
+                                "offsetY": null,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.auth0-lock-widget').find('[name=\"email\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[name=\"email\"].auth0-lock-input')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#auth0-lock-container-1').find('[name=\"email\"].auth0-lock-input')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"auth0-lock-input-wrap auth0-lock-focused auth0-loc\"]').find('[name=\"email\"].auth0-lock-input')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('or').nth(14).find('[name=\"email\"].auth0-lock-input')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"auth0-lock-input-wrap auth0-lock-focused auth0-loc\"]').find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('or').nth(14).nth(14).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#auth0-lock-container-1').find('div').find('div').nth(1).find('form').find('div').find('div').find('div').nth(8).find('span').find('div').find('div').find('div').find('div').find('div').find('div').find('div').find('div').find('div').nth(6).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').nth(1).find('form').find('div').find('div').find('div').nth(8).find('span').find('div').find('div').find('div').find('div').find('div').find('div').find('div').find('div').find('div').nth(6).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "luke34@gmx.de",
+                            "type": "type-text"
+                        },
+                        {
+                            "callsite": "3",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('.auth0-lock-widget').find('[name=\"password\"]')"
+                            },
+                            "studio": {
+                                "offsetX": 85,
+                                "offsetY": 30,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.auth0-lock-widget').find('[name=\"password\"]')"
+                                        },
+                                        "ruleType": "form-input"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[name=\"password\"].auth0-lock-input')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#auth0-lock-container-1').find('[name=\"password\"].auth0-lock-input')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"auth0-lock-input-wrap auth0-lock-input-wrap-with-i\"]').find('[name=\"password\"].auth0-lock-input')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('or').nth(14).find('[name=\"password\"].auth0-lock-input')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"auth0-lock-input-wrap auth0-lock-input-wrap-with-i\"]').find('input')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('or').nth(14).nth(14).find('div').nth(2).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#auth0-lock-container-1').find('div').find('div').nth(1).find('form').find('div').find('div').find('div').nth(8).find('span').find('div').find('div').find('div').find('div').find('div').find('div').find('div').find('div').find('div').nth(6).find('div').nth(2).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').nth(1).find('form').find('div').find('div').find('div').nth(8).find('span').find('div').find('div').find('div').find('div').find('div').find('div').find('div').find('div').find('div').nth(6).find('div').nth(2).find('div').find('div').find('input')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "text": "TestAuth1337!!!",
+                            "type": "type-text"
+                        },
+                        {
+                            "callsite": "4",
+                            "options": {},
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('.auth0-lock-submit')"
+                            },
+                            "studio": {
+                                "offsetX": 154,
+                                "offsetY": 24,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.auth0-lock-submit')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#auth0-lock-container-1').find('.auth0-lock-submit')"
+                                        },
+                                        "ruleType": "id-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.auth0-lock-cred-pane.auth0-lock-quiet').find('.auth0-lock-submit')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('my-old-startups-domain').nth(4).find('.auth0-lock-submit')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('button').withText('LOG IN').nth(1)"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#auth0-lock-container-1').find('button').withText('LOG IN').nth(1)"
+                                        },
+                                        "ruleType": "id-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('my-old-startups-domain').nth(4).nth(4).find('button').nth(1)"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('#auth0-lock-container-1').find('div').find('div').nth(1).find('form').find('div').find('div').find('button').nth(1)"
+                                        },
+                                        "ruleType": "id-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').nth(1).find('form').find('div').find('div').find('button').nth(1)"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": false
+                            },
+                            "type": "click"
+                        },
+                        {
+                            "callsite": "5",
+                            "dragOffsetX": 323,
+                            "dragOffsetY": 1,
+                            "options": {
+                                "offsetX": 38,
+                                "offsetY": 16
+                            },
+                            "selector": {
+                                "type": "js-expr",
+                                "value": "Selector('p').withText('Please fill in the base data for your restaurant f')"
+                            },
+                            "studio": {
+                                "offsetX": 38,
+                                "offsetY": 16,
+                                "selectors": [
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('p').withText('Please fill in the base data for your restaurant f')"
+                                        },
+                                        "ruleType": "text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('[class^=\"MuiTypography-root-82 MuiTypography-body1-91 Compo\"]')"
+                                        },
+                                        "ruleType": "attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiSnackbarContent-message-181').find('p').withText('Please fill in the base data for your restaurant f')"
+                                        },
+                                        "ruleType": "attr-text"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiSnackbarContent-message-181').find('[class^=\"MuiTypography-root-82 MuiTypography-body1-91 Compo\"]')"
+                                        },
+                                        "ruleType": "attr-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Please fill in the base data for your restaurant f').nth(3).find('[class^=\"MuiTypography-root-82 MuiTypography-body1-91 Compo\"]')"
+                                        },
+                                        "ruleType": "text-attr"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('.MuiSnackbarContent-message-181').find('p')"
+                                        },
+                                        "ruleType": "attr-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('div').withText('Please fill in the base data for your restaurant f').nth(3).nth(3).find('p')"
+                                        },
+                                        "ruleType": "text-dom"
+                                    },
+                                    {
+                                        "rawSelector": {
+                                            "type": "js-expr",
+                                            "value": "Selector('body').find('div').find('div').find('div').find('div').find('p')"
+                                        },
+                                        "ruleType": "dom"
+                                    }
+                                ],
+                                "useOffsets": true
+                            },
+                            "type": "drag"
+                        },
+                        {
+                            "actual": {
+                                "type": "js-expr",
+                                "value": "ClientFunction(() => document.location.href)()"
+                            },
+                            "assertionType": "contains",
+                            "callsite": "6",
+                            "expected": {
+                                "type": "js-expr",
+                                "value": "\"/restaurant\""
+                            },
+                            "message": "Should redirect to restaurant details",
+                            "options": {},
+                            "studio": {},
+                            "type": "assertion"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

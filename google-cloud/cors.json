@@ -1,0 +1,21 @@
+[
+  {
+    "origin": [
+      "http://localhost:8181",
+      "https://www.my-old-startups-domain.de",
+      "https://dashboard.my-old-startups-domain.de",
+      "https://hub.my-old-startups-domain.de",
+      "https://app.my-old-startups-domain.de",
+      "https://test-app.my-old-startups-domain.de",
+      "https://test-dashboard.my-old-startups-domain.de"
+    ],
+    "responseHeader": [
+      "Content-Type"
+    ],
+    "method": [
+      "GET",
+      "HEAD"
+    ],
+    "maxAgeSeconds": 3600
+  }
+]

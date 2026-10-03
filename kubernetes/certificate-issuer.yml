@@ -1,0 +1,23 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Issuer
+metadata:
+  name: letsencryptdns-new
+  namespace: cert-manager
+spec:
+  acme:
+    # The ACME server URL
+    server: 'https://acme-v02.api.letsencrypt.org/directory'
+    # Email address used for ACME registration
+    email: "info@my-old-startups-domain.de"
+    # Name of a secret used to store the ACME account private key
+    privateKeySecretRef:
+      name: issuer-account-key
+    solvers:
+    - dns01:
+        clouddns:
+          # The ID of the GCP project
+          project: tablespotter
+          # This is the secret used to access the service account
+          serviceAccountSecretRef:
+            name: clouddns
+            key: clouddns.key.json

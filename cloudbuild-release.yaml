@@ -1,0 +1,118 @@
+options:
+  machineType: 'N1_HIGHCPU_8'
+
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['pull', 'eu.gcr.io/$PROJECT_ID/api:latest']
+    waitFor: ['-']
+    id: 'pull_api'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['pull', 'eu.gcr.io/$PROJECT_ID/frontend-dependencies:latest']
+    waitFor: ['-']
+    id: 'pull_frontend_dependencies'
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['pull', 'eu.gcr.io/$PROJECT_ID/dashboard-frontend:latest']
+    waitFor: ['-']
+    id: 'pull_dashboard'
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['pull', 'eu.gcr.io/$PROJECT_ID/hub-frontend:latest']
+    waitFor: ['-']
+    id: 'pull_hub'
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['pull', 'eu.gcr.io/$PROJECT_ID/customer-frontend:latest']
+    waitFor: ['-']
+    id: 'pull_customer'
+
+  ### FRONTEND Dependencies
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/frontend-dependencies:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/frontend-dependencies:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/frontend-dependencies:$COMMIT_SHA'
+      - '--build-arg'
+      - 'base_domain=${_BASE_DOMAIN}'
+      - '--build-arg'
+      - 'is_staging=${_IS_STAGING}'
+      - '--file=frontend/Dockerfile.deps'
+      - '.'
+    waitFor: ['pull_frontend_dependencies']
+    id: 'build_frontend_dependencies'
+
+  ### API
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/api:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/api:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/api:$COMMIT_SHA'
+      - '--build-arg'
+      - 'base_domain=${_BASE_DOMAIN}'
+      - '--build-arg'
+      - 'is_staging=${_IS_STAGING}'
+      - '--file=api/Dockerfile'
+      - '.'
+    waitFor: ['pull_api']
+    id: 'build_api'
+
+  ### DASHBOARD FRONTEND
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/frontend-dependencies:latest'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/dashboard-frontend:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/dashboard-frontend:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/dashboard-frontend:$COMMIT_SHA'
+      - '--build-arg'
+      - 'base_domain=${_BASE_DOMAIN}'
+      - '--build-arg'
+      - 'is_staging=${_IS_STAGING}'
+      - '--file=frontend/dashboard/Dockerfile'
+      - '.'
+    waitFor: ['pull_dashboard','build_frontend_dependencies']
+    id: 'build_dashboard'
+
+  ### HUB FRONTEND
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/frontend-dependencies:latest'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/hub-frontend:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/hub-frontend:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/hub-frontend:$COMMIT_SHA'
+      - '--build-arg'
+      - 'base_domain=${_BASE_DOMAIN}'
+      - '--build-arg'
+      - 'is_staging=${_IS_STAGING}'
+      - '--file=frontend/hub/Dockerfile'
+      - '.'
+    waitFor: ['pull_hub','build_frontend_dependencies']
+    id: 'build_hub'
+
+  ### CUSTOMER FRONTEND
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/frontend-dependencies:latest'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/customer-frontend:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/customer-frontend:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/customer-frontend:$COMMIT_SHA'
+      - '--build-arg'
+      - 'base_domain=${_BASE_DOMAIN}'
+      - '--build-arg'
+      - 'is_staging=${_IS_STAGING}'
+      - '--file=frontend/customer/Dockerfile'
+      - '.'
+    waitFor: ['pull_customer','build_frontend_dependencies']
+    id: 'build_customer'
+
+images:
+  - 'eu.gcr.io/$PROJECT_ID/api'
+  - 'eu.gcr.io/$PROJECT_ID/frontend-dependencies'
+  - 'eu.gcr.io/$PROJECT_ID/dashboard-frontend'
+  - 'eu.gcr.io/$PROJECT_ID/hub-frontend'
+  - 'eu.gcr.io/$PROJECT_ID/customer-frontend'
+
+timeout: 2400s

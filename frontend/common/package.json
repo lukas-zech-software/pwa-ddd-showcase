@@ -1,0 +1,20 @@
+{
+  "name": "@my-old-startup/frontend-common",
+  "version": "1.0.0",
+  "scripts": {
+    "lint-fix": "eslint --format unix --fix \"**/*.ts\" \"**/*.tsx\""
+  },
+  "devDependencies": {
+    "@types/googlemaps": "^3.39.3",
+    "eslint": "^6.1.0"
+  },
+  "xhusky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --format unix",
+    "*.tsx": "eslint --format unix"
+  }
+}

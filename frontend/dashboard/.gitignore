@@ -1,0 +1,17 @@
+.idea/
+node_modules/
+/eat-common
+
+npm-debug.log
+
+
+/build
+/client/*.js
+/client/*.js.map
+/client/*.jsx
+/client/*.jsx.map
+
+/server/*.js
+/server/*.js.map
+/server/*.jsx
+/server/*.jsx.map

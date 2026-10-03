@@ -1,0 +1,75 @@
+<% include ../../common/header_new.ejs %>
+
+<meta itemprop="name" content="Confirm Email"/>
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block">
+            <h3>Ein neues Restaurant hat sich beworben!</h3>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="content-block">
+            <b>Name</b>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td class="content-block">
+            <%= company.title %>
+        </td>
+    </tr>
+
+    <tr>
+        <td class="content-block">
+            <b>Adresse:</b>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <%= company.address %>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <%= company.zipCode %> <%= company.city %>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <b>Kontakt:</b>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <%= company.telephone %>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <%= company.email %>
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            Website:
+        </td>
+    </tr>
+    <tr>
+        <td class="content-block">
+            <%= company.website %>
+        </td>
+    </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+    <tr>
+        <td class="content-block" itemprop="handler" itemscope
+            itemtype="http://schema.org/HttpActionHandler">
+            <a href="https://hub.my-old-startups-domain.de/company/<%= company.id %>" class="btn-primary" itemprop="url">Zum
+                BackOffice</a>
+        </td>
+    </tr>
+</table>
+
+<% include ../../common/footer_new.ejs %>

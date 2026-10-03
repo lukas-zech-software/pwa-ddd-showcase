@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.base.json",
+  "include": [
+    "typings/*.d.ts",
+    "client/**/*.ts",
+    "client/**/*.tsx",
+    "../../common/**/*.d.ts",
+    "../common/typings/*.d.ts",
+    "node_modules/@my-old-startup/**/*.tsx",
+    "node_modules/@my-old-startup/**/*.ts"
+  ]
+}

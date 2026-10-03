@@ -1,0 +1,10 @@
+{
+  "extends": "../tsconfig.base.json",
+  "include": [
+    "../common/typings/*.d.ts",
+    "typings/*.d.ts",
+    "test/**/*.ts",
+    "client/**/*.ts",
+    "client/**/*.tsx"
+  ]
+}
