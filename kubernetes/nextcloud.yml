@@ -1,0 +1,56 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: nextcloud
+  namespace: cert-manager
+  labels:
+    app: nextcloud
+    tier: infra
+    version: "7"
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nextcloud
+      tier: infra
+  template:
+    metadata:
+      labels:
+        app: nextcloud
+        tier: infra
+    spec:
+      containers:
+      - name: nextcloud
+        image: nextcloud:latest
+        env:
+        - name: NEXTCLOUD_ADMIN_USER
+          value: 'nextcloud_admin'
+        - name: NEXTCLOUD_ADMIN_PASSWORD
+          value: 'some-secret-password'
+        - name: OVERWRITEHOST
+          value: "nextcloud.my-old-startups-domain.de"
+        - name: OVERWRITEPROTOCOL
+          value: "http"
+        ports:
+        - containerPort: 8080
+
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: nextcloud-service
+  namespace: cert-manager
+  labels:
+    app: nextcloud
+    tier: infra
+    version: "7"
+spec:
+  selector:
+    app: nextcloud
+    tier: infra
+  type: NodePort
+  ports:
+  - protocol: TCP
+    name: http
+    port: 80
+    targetPort: 8080

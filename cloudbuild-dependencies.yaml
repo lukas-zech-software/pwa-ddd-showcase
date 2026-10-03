@@ -1,0 +1,28 @@
+options:
+
+steps:
+  ### API Dependencies
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/api-dependencies:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/api-dependencies:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/api-dependencies:$COMMIT_SHA'
+      - '--file=api/Dockerfile.deps'
+      - '.'
+
+  ### FRONTEND Dependencies
+  - name: 'gcr.io/cloud-builders/docker'
+    args:
+      - 'build'
+      - '--cache-from=eu.gcr.io/$PROJECT_ID/frontend-dependencies:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/frontend-dependencies:latest'
+      - '--tag=eu.gcr.io/$PROJECT_ID/frontend-dependencies:$COMMIT_SHA'
+      - '--file=frontend/Dockerfile.deps'
+      - '.'
+
+images:
+  - 'eu.gcr.io/$PROJECT_ID/api-dependencies'
+  - 'eu.gcr.io/$PROJECT_ID/frontend-dependencies'
+
+timeout: 1200s

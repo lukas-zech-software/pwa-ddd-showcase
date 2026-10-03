@@ -1,0 +1,29 @@
+{
+  "name": "my-old-startups-domain Dashboard",
+  "short_name": "my-old-startups-domain Dashboard",
+  "description": "Dashboard für Gastronomen",
+  "lang": "de-DE",
+  "orientation": "portrait",
+  "scope": "/",
+  "start_url": "/?utm_source=standalone&utm_medium=pwa",
+  "display": "standalone",
+  "theme_color": "#FFF",
+  "background_color": "#EEE",
+  "icons": [
+       {
+      "src": "/android-chrome-192x192.png?v=2",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-384x384.png?v=2",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png?v=2",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

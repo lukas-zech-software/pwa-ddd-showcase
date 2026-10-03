@@ -1,0 +1,95 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: my-old-startups-domain-de-ingress
+  namespace: cert-manager
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.org/proxy-connect-timeout: "30s"
+    nginx.org/proxy-read-timeout: "20s"
+    nginx.org/client-max-body-size: "20m"
+    nginx.org/large-client-header-buffers: "4 32k"
+    ingress.kubernetes.io/proxy-body-size: 20mb
+    cert-manager.io/issuer: letsencryptdns-new
+    cert-manager.io/issuer-kind: Issuer
+    global.rbac.create: "true"
+  labels:
+    last_updated: "3"
+spec:
+  tls:
+    - hosts:
+        - "*.my-old-startups-domain.de"
+      secretName: my-old-startups-domain-de-certificate-secret
+  rules:
+    - host: app.my-old-startups-domain.de
+      http:
+        paths:
+          - backend:
+              serviceName: customer-frontend-service
+              servicePort: 80
+    - host: api-customer.my-old-startups-domain.de
+      http:
+        paths:
+          - backend:
+              serviceName: customer-api-service
+              servicePort: 80
+
+    - host: dashboard.my-old-startups-domain.de
+      http:
+        paths:
+          - backend:
+              serviceName: dashboard-frontend-service
+              servicePort: 80
+    - host: api-dashboard.my-old-startups-domain.de
+      http:
+        paths:
+          - backend:
+              serviceName: dashboard-api-service
+              servicePort: 80
+
+    - host: hub.my-old-startups-domain.de
+      http:
+        paths:
+          - backend:
+              serviceName: hub-frontend-service
+              servicePort: 80
+    - host: api-hub.my-old-startups-domain.de
+      http:
+        paths:
+          - backend:
+              serviceName: hub-api-service
+              servicePort: 80
+
+  ########################### DEV ######################################
+    - host: test-app.my-old-startups-domain.de
+      http:
+        paths:
+          - backend:
+              serviceName: customer-dev-frontend-service
+              servicePort: 80
+    - host: api-customer-test.my-old-startups-domain.de
+      http:
+        paths:
+          - backend:
+              serviceName: customer-dev-api-service
+              servicePort: 80
+  ########################### DEV ######################################
+    - host: test-dashboard.my-old-startups-domain.de
+      http:
+        paths:
+          - backend:
+              serviceName: dashboard-dev-frontend-service
+              servicePort: 80
+    - host: api-dashboard-test.my-old-startups-domain.de
+      http:
+        paths:
+          - backend:
+              serviceName: dashboard-dev-api-service
+              servicePort: 80
+  ########################### TEST-CLOUD ######################################
+    - host: nextcloud.my-old-startups-domain.de
+      http:
+        paths:
+          - backend:
+              serviceName: nextcloud-service
+              servicePort: 80

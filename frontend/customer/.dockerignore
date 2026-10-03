@@ -1,0 +1,15 @@
+.git
+.idea/
+.next/
+.editorconfig
+.gitignore
+Dockerfile
+**/.DS_Store
+customer/amp/
+customer/.next
+customer/node_modules/
+dashboard/node_modules/
+dashboard/build/
+hub/node_modules/
+hub/build/
+node_modules/

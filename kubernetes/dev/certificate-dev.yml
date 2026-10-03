@@ -1,0 +1,19 @@
+apiVersion: cert-manager.io/v1alpha2
+kind: Certificate
+metadata:
+  name:my-old-startups-domain-de-dev
+  namespace: cert-manager
+spec:
+  secretName: my-old-startup-de-certificate-secret-dev
+  issuerRef:
+    name: letsencryptdns-dev
+    kind: Issuer
+  commonName: '*.my-old-startups-domain-staging.de'
+  dnsNames:
+    - '*.my-old-startups-domain-staging.de'
+  acme:
+    config:
+      - dns01:
+          provider: clouddns-dev
+        domains:
+          - '*.my-old-startups-domain-staging.de'

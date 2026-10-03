@@ -1,0 +1,32 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "strictFunctionTypes": false,
+    "strictNullChecks": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "module": "commonjs",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "noEmitOnError": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "importHelpers": true,
+    "sourceMap": true,
+    "allowSyntheticDefaultImports": false,
+    "outDir": "./build",
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/typings"
+    ]
+  },
+  "exclude": [
+    "node_modules/**/*.d.ts"
+  ],
+  "include": [
+    "src/**/*.ts",
+    "test/**/*.ts",
+    "node_modules/@my-old-startup/**/*.ts",
+    "node_modules/@my-old-startup/**/*.d.ts",
+  ]
+}
